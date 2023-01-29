@@ -27,6 +27,6 @@ print('и оставить на конец', num1 * 0.3 / 3 * 2, 'г;')
 print('сыра —', num1 * 0.24, 'г;')
 print('лука —', num1 * 0.2, 'г;')
 print('бульона —', num1 * 5, 'мл;')
-print('вина —', num1 * 0.38, 'мл.', end='\n')
+print('вина —', num1 * 0.38, 'мл.')
 import os
 os.system('pause') 

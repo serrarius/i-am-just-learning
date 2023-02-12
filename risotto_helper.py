@@ -16,6 +16,7 @@ while True:
     num0 = input()
     # Since in Russia the decimal separator is a comma, we need be able to replace the comma with a period,
     # just in case, so that no error will occur due to entering a value with a comma.
+    # However, again for aesthetic reasons, in the future the dot will have to be replaced by a comma, for which the replace function will be used.
     if ',' in num0:
         num0 = num0.replace(',', '.')
     # This starts checking if num0 is a positive number.
@@ -24,7 +25,7 @@ while True:
         num0 = float(num0)
         if num0 >= 50:
             num1 = num0
-            print('\nДля приготовления ризотто из', num1, 'г риса нужно взять:')        
+            print('\nДля приготовления ризотто из', str(num1).replace('.',','), 'г риса нужно взять:')        
             break
         # The cycle begins again if the user enters a number greater than 12 or less than 50.
         # The user has the ability to re-enter the desired value without restarting the program.
@@ -43,7 +44,7 @@ while True:
             elif num0 % 1 == 0:
                 print('\nДля приготовления', int(num0), 'порций ризотто нужно взять:')
             else:
-                print('\nДля приготовления', num0, 'порций ризотто нужно взять:')
+                print('\nДля приготовления', str(num0).replace('.',','), 'порций ризотто нужно взять:')
             print('риса —', num1, 'г;') 
             break           
     # The cycle starts again if user enter zero, a negative number or a value that is not a number.

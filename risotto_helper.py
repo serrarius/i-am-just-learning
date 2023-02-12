@@ -1,4 +1,4 @@
-# A function for checking if the entered value is an integer or a floating point number.
+# A function for checking if the entered value is an integer number or a floating point number.
 def isfloat(value):
     try:
         float(value)

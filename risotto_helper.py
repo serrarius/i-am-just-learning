@@ -8,15 +8,13 @@ def isfloat(value):
 while True:
     # The program prompts user to enter either the number of risotto servings or the weight of the rice with which we want to cook the risotto.
     # It's assumed that the user knows how to cook risotto.
-    # Also it's assumed that the portions should not be more than 12, and the rice should not be less than 50 grams.
+    # It's also assumed that the portions should not be more than 12, and the rice should not be less than 50 grams.
     print('Введите в цифровом значении кол-во порций ризотто (не более 12) или вес риса в граммах (не менее 50): ', end='')    
     num0 = input()
     # Since in Russia the decimal separator is a comma, we need be able to replace the comma with a period.
-    # The dot will be replaced back by a comma in the output.
+    # The period will be replaced back by a comma in the output.
     if ',' in num0:
         num0 = num0.replace(',', '.')
-    # This starts checking if num0 is a positive number.
-    # The number can be an integer, it can be floating point, so we need the previously created isfloat function.
     if isfloat(num0) and float(num0) > 0:
         num0 = float(num0)
         if num0 >= 50:
@@ -30,10 +28,10 @@ while True:
             # Multiply the number of servings by the weight of the rice for one serving.
             # We take 62.5 grams as the weight of the rice for one serving.
             num1 = int(62.5 * num0)
-            # If num0 is a number with a decimal separator, we do not convert num0 to an integer.
-            # If num0 is an integer, however, we need this conversion.
-            # The word "порция", meaning portion, is declined in the genitive case in this case.
-            # But if num0 == 1, "portion" must be declined in the accusative case, so there is a separate case for that.
+            # If num0 is a number with digits other than zero after the decimal separator, we do not convert num0 to an integer.
+            # If not, we need this conversion.
+            # The word "порция", meaning portion, is declined in the genitive case.
+            # If num0 == 1, the word is declined in the singular, otherwise it is declined in the plural.
             if num0 == 1:
                 print('\nДля приготовления одной порции ризотто нужно взять:')
             elif num0 % 1 == 0:

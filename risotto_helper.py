@@ -40,7 +40,7 @@ while True:
                 print('\nДля приготовления', str(num0).replace('.',','), 'порций ризотто нужно взять:')
             print('риса —', num1, 'г;') 
             break           
-    # The cycle starts again if user enter zero, a negative number or a value that is not a number.
+    # The cycle begins again if user enter zero, a negative number or a value that is not a number.
     else:
         print('Введенное значение не является числом, либо не может быть применено для расчета. Попробуйте еще раз.\n')
 # The program calculates and prints the amount of other ingredients based on the amount of rice in the specified proportions.

@@ -19,7 +19,10 @@ while True:
         num0 = float(num0)
         if num0 >= 50:
             num1 = num0
-            print('\nДля приготовления ризотто из', str(num1).replace('.',','), 'г риса нужно взять:')        
+            if num0 % 1 == 0:
+                print('\nДля приготовления ризотто из', int(num0), 'г риса нужно взять:')
+            else:
+                print('\nДля приготовления ризотто из', str(num0).replace('.',','), 'г риса нужно взять:')        
             break
         # The cycle begins again if the user enters a number greater than 12 or less than 50.
         elif num0 > 12:
@@ -40,7 +43,7 @@ while True:
                 print('\nДля приготовления', str(num0).replace('.',','), 'порций ризотто нужно взять:')
             print('риса —', num1, 'г;') 
             break           
-    # The cycle begins again if user enter zero, a negative number or a value that is not a number.
+    # The cycle starts again if user enter zero, a negative number or a value that is not a number.
     else:
         print('Введенное значение не является числом, либо не может быть применено для расчета. Попробуйте еще раз.\n')
 # The program calculates and prints the amount of other ingredients based on the amount of rice in the specified proportions.

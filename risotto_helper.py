@@ -16,7 +16,7 @@ while True:
     num0 = input()
     # Since in Russia the decimal separator is a comma, we need be able to replace the comma with a period,
     # just in case, so that no error will occur due to entering a value with a comma.
-    # However, again for aesthetic reasons, in the future the dot will have to be replaced by a comma, for which the replace function will be used.
+    # However, for aesthetic reasons, in the future the dot will have to be replaced by a comma, for which the replace function will be used.
     if ',' in num0:
         num0 = num0.replace(',', '.')
     # This starts checking if num0 is a positive number.

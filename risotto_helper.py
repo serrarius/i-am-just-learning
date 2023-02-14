@@ -35,8 +35,9 @@ def portions_s_or_pl(value):
         return f'{int_or_comma(value)} порций'
 
 while True:
-    # The program prompts user to enter either the number of risotto servings
-    # or the weight of the rice with which we want to cook the risotto.
+    # The program prompts user to enter either the number of risotto
+    # servings or the weight of the rice
+    # with which we want to cook the risotto.
     # It's assumed that the user knows how to cook risotto.
     # It's also assumed that the portions should not be more than 12,
     # and the rice should not be less than 50 grams.

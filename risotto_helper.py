@@ -57,17 +57,18 @@ f'Попробуйте еще раз.\n')
 f'Попробуйте еще раз.\n')
     elif 0 < entered_value <= max_portions:
         amount_of_rice = entered_value * rice_in_portion
-        print(f'''\nДля приготовления {portions_s_or_pl(entered_value)} ризотто нужно взять:
-риса — {int(amount_of_rice)} г;''')
+        print(f'''\nДля приготовления {portions_s_or_pl(entered_value)} '''
+f'''ризотто нужно взять:\nриса — {int(amount_of_rice)} г;''')
         break
     else:
-        print(f'''Для приготовления ризотто из {int_or_comma(entered_value)} г риса нужно взять:''')
+        print(f'''Для приготовления ризотто '''
+f'''из {int_or_comma(entered_value)} г риса нужно взять:''')
         amount_of_rice = int(entered_value)
         break
     
 # The program calculates and prints the amount of other ingredients
 # based on the amount of rice in the specified proportions.
-print(f'''сливочного масла — {int(amount_of_rice * 0.3)} г,'''
+print(f'''сливочного масла — {int(amount_of_rice * 0.3)} г, '''
 f'''из которого взять для жарки {int(amount_of_rice * 0.3 / 3)} г'''
 f'''и оставить на конец {int(amount_of_rice * 0.3 / 3 * 2)} г,
 сыра — {int(amount_of_rice * 0.24)} г;

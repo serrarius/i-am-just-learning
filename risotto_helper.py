@@ -43,10 +43,8 @@ while True:
         entered_value = float(entered_value)
     if 0 >= entered_value:
         print('Введенное значение не может быть применено для расчета. Попробуйте еще раз.\n')
-        continue
     elif max_portions < entered_value < min_rice:
         print('Либо слишком много порций, либо слишком мало риса. Попробуйте еще раз.\n')
-        continue
     elif 0 < entered_value <= max_portions:
         amount_of_rice = entered_value * rice_in_portion
         print(f'''\nДля приготовления {portions_s_or_pl(entered_value)} ризотто нужно взять:

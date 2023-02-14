@@ -66,5 +66,5 @@ f'''и оставить на конец {int(amount_of_rice * 0.3 / 3 * 2)} г,
 лука — {int(amount_of_rice * 0.2)} г;
 бульона — {int(amount_of_rice * 5)} мл;
 вина — {int(amount_of_rice * 0.38)} мл.''')
-import os
-os.system('pause')
+from os import system
+system('pause')

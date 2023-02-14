@@ -23,7 +23,7 @@ def int_or_comma(value):
     else:
         return (str(value)).replace('.', ',')
 
-# Function for correct declination of the word "порция" (portion) in the output depending on the number of portions.
+# Function for correct declination of the word "portion" in the output depending on the number of portions.
 def portions_s_or_pl(value):
     if value == 1:
         return 'одной порции'
@@ -65,6 +65,6 @@ f'''и оставить на конец {int(amount_of_rice * 0.3 / 3 * 2)} г,
 сыра — {int(amount_of_rice * 0.24)} г;
 лука — {int(amount_of_rice * 0.2)} г;
 бульона — {int(amount_of_rice * 5)} мл;
-вина — {int(amount_of_rice * 0.38)} мл.''')
+вина — {int(amount_of_rice * 0.38)} мл.\n''')
 from os import system
 system('pause')

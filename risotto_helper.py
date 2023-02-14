@@ -56,8 +56,8 @@ while True:
         break
     
 # The program calculates and prints the amount of other ingredients based on the amount of rice in the specified proportions.
-print(f'''сливочного масла — {int(amount_of_rice * 0.3)} г,''',
-f'''из которого взять для жарки {int(amount_of_rice * 0.3 / 3)} г''',
+print(f'''сливочного масла — {int(amount_of_rice * 0.3)} г,'''
+f'''из которого взять для жарки {int(amount_of_rice * 0.3 / 3)} г'''
 f'''и оставить на конец {int(amount_of_rice * 0.3 / 3 * 2)} г,
 сыра — {int(amount_of_rice * 0.24)} г;
 лука — {int(amount_of_rice * 0.2)} г;

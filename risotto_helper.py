@@ -16,7 +16,7 @@ def is_float(value):
     except ValueError:
         return False
 
-# If we get a floating point number, we replace the point back with a comma for the output.
+# If we get a floating point number, we replace the period back with a comma for the output.
 def int_or_comma(value):
     if value % 1 == 0:
         return int(value)

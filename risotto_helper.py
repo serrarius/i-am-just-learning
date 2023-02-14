@@ -2,11 +2,10 @@ max_portions = 12
 min_rice = 50
 rice_in_portion = 62.5
 
-# Since in Russia the decimal separator is a comma, we need be able to replace the comma with a period to work with value.
+# Since in Russia the decimal separator is a comma, we need be able to replace the comma in the entered value with a period to work with value.
 def comma_to_period(value):
     return value.replace(',', '.')
 
-# For the same reasons, values containing a period will be output with a comma.
 def float_period(value):
     return float(comma_to_period(value))
 
@@ -17,13 +16,14 @@ def is_float(value):
     except ValueError:
         return False
 
+# If we need to print a floating point number, we change the period back to a comma.
 def int_or_comma(value):
     if value % 1 == 0:
         return int(value)
     else:
         return (str(value)).replace('.', ',')
 
-
+# Function for correct declination of the word "portion" in the output depending on the number of portions.
 def portions_s_or_pl(value):
     if value == 1:
         return 'одной порции'

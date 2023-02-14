@@ -39,7 +39,8 @@ while True:
     if is_float(entered_value) == False:
         print('Введенное значение не является числом или введено в некорректном формате. Попробуйте еще раз.\n')
         continue
-    entered_value = float(entered_value)
+    else:
+        entered_value = float(entered_value)
     if 0 >= entered_value:
         print('Введенное значение не может быть применено для расчета. Попробуйте еще раз.\n')
         continue

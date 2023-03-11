@@ -8,9 +8,6 @@ rice_in_portion = 62.5
 def comma_to_period(value):
     return value.replace(',', '.')
 
-def float_period(value):
-    return float(comma_to_period(value))
-
 def is_float(value):
     try:
         float(value)
@@ -24,7 +21,7 @@ def int_or_comma(value):
     if value % 1 == 0:
         return int(value)
     else:
-        return (str(value)).replace('.', ',')
+        return str(value).replace('.', ',')
 
 # Function for correct declination of the word "порция" (portion)
 # in the output depending on the number of portions.
@@ -44,12 +41,12 @@ while True:
     print(f'Введите в цифровом формате кол-во порций ризотто (не более 12) '
 f'или вес риса в граммах (не менее 50): ', end='')
     entered_value = comma_to_period(input())
-    if is_float(entered_value) == False:
+    if is_float(entered_value):
+        entered_value = float(entered_value)
+    else:
         print(f'Введенное значение не является числом '
 f'или введено в некорректном формате. Попробуйте еще раз.\n')
         continue
-    else:
-        entered_value = float(entered_value)
     if 0 >= entered_value:
         print(f'Введенное значение не может быть применено для расчета. '
 f'Попробуйте еще раз.\n')
